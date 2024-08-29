@@ -1,113 +1,850 @@
-import Image from "next/image";
+
+
+// import Link from 'next/link';
+// import { Button } from "@/components/ui/button";
+// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+// import { Calendar, Shield, Clock, Car, ThumbsUp, User, DollarSign, Sparkles } from 'lucide-react';
+
+// export default function Home() {
+//   return (
+//     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+//       {/* Hero Section with Video Background */}
+//       <section className="relative h-screen overflow-hidden">
+//         <video
+//           autoPlay
+//           loop
+//           muted
+//           playsInline
+//           className="absolute top-0 left-0 w-full h-full object-cover"
+//         >
+//           <source src="/videos/limo-background.mp4" type="video/mp4" />
+//           Your browser does not support the video tag.
+//         </video>
+//         <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center">
+//           <div className="container mx-auto px-4 text-center">
+//             <h1 className="text-5xl md:text-6xl font-bold mb-4 text-shadow animate-fade-in-up">Welcome to LuxeRide Limo Service</h1>
+//             <p className="text-xl md:text-2xl mb-8 text-shadow animate-fade-in-up animation-delay-300">Experience luxury transportation at competitive per-mile rates.</p>
+//             <Button asChild className="bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-8 rounded-full text-xl transition duration-300 animate-fade-in-up animation-delay-600">
+//               <Link href="/booking">Book Your Luxury Ride</Link>
+//             </Button>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Features Section */}
+//       <section className="py-16 bg-gray-800 bg-opacity-80">
+//         <div className="container mx-auto px-4">
+//           <div className="grid md:grid-cols-3 gap-8">
+//             <FeatureCard
+//               icon={<Car className="w-12 h-12 text-amber-500" />}
+//               title="Luxurious Fleet"
+//               description="Choose from our wide range of high-end vehicles for any occasion."
+//             />
+//             <FeatureCard
+//               icon={<User className="w-12 h-12 text-amber-500" />}
+//               title="Professional Drivers"
+//               description="Our experienced chauffeurs ensure a safe and comfortable journey."
+//             />
+//             <FeatureCard
+//               icon={<DollarSign className="w-12 h-12 text-amber-500" />}
+//               title="Transparent Pricing"
+//               description="Pay only for the miles you travel with our competitive rates."
+//             />
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* How It Works Section */}
+//       <section className="py-16 bg-gray-900 bg-opacity-80">
+//         <div className="container mx-auto px-4">
+//           <h2 className="text-3xl font-bold mb-8 text-center">How It Works</h2>
+//           <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-4">
+//             <Step number={1} description="Choose your pickup and drop-off locations" />
+//             <Step number={2} description="Select your preferred vehicle type" />
+//             <Step number={3} description="Get an instant quote based on the distance" />
+//             <Step number={4} description="Confirm and pay securely through our platform" />
+//             <Step number={5} description="Enjoy your luxurious ride!" />
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Why Choose LuxeRide Section */}
+//       <section className="py-16 bg-gray-800 bg-opacity-80">
+//         <div className="container mx-auto px-4">
+//           <h2 className="text-3xl font-bold mb-8 text-center">Why Choose LuxeRide?</h2>
+//           <div className="grid md:grid-cols-3 gap-6">
+//             <Reason icon={<Clock className="w-6 h-6 text-amber-500" />} description="24/7 customer support" />
+//             <Reason icon={<Shield className="w-6 h-6 text-amber-500" />} description="Fully insured and licensed service" />
+//             <Reason icon={<Calendar className="w-6 h-6 text-amber-500" />} description="Flexible booking options" />
+//             <Reason icon={<Sparkles className="w-6 h-6 text-amber-500" />} description="Clean and well-maintained vehicles" />
+//             <Reason icon={<ThumbsUp className="w-6 h-6 text-amber-500" />} description="Satisfaction guaranteed" />
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Footer */}
+//       <footer className="bg-black py-8">
+//         <div className="container mx-auto px-4">
+//           <div className="flex flex-wrap justify-between items-center">
+//             <div className="w-full md:w-auto mb-4 md:mb-0">
+//               <p>&copy; 2024 LuxeRide Limo Service. All rights reserved.</p>
+//             </div>
+//             <div className="w-full md:w-auto space-x-4">
+//               <Link href="/terms" className="hover:text-amber-500 transition duration-300">Terms of Service</Link>
+//               <Link href="/privacy" className="hover:text-amber-500 transition duration-300">Privacy Policy</Link>
+//               <Link href="/contact" className="hover:text-amber-500 transition duration-300">Contact Us</Link>
+//             </div>
+//           </div>
+//         </div>
+//       </footer>
+//     </main>
+//   );
+// }
+
+// // Component for feature cards
+// const FeatureCard = ({ icon, title, description }:any) => (
+//   <Card className="bg-gray-700 bg-opacity-50 shadow-lg backdrop-blur-sm">
+//     <CardHeader>
+//       <div className="flex justify-center mb-4">{icon}</div>
+//       <CardTitle className="text-2xl font-semibold text-center">{title}</CardTitle>
+//     </CardHeader>
+//     <CardContent>
+//       <p className="text-center">{description}</p>
+//     </CardContent>
+//   </Card>
+// );
+
+// // Component for how it works steps
+// const Step = ({ number, description }:any) => (
+//   <div className="flex flex-col items-center text-center">
+//     <div className="bg-amber-500 text-black rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-2">
+//       {number}
+//     </div>
+//     <p className="mt-2">{description}</p>
+//   </div>
+// );
+
+// // Component for reasons to choose LuxeRide
+// const Reason = ({ icon, description } :any) => (
+//   <Card className="bg-gray-700 bg-opacity-50 shadow-lg backdrop-blur-sm">
+//     <CardContent className="flex items-center p-4">
+//       <div className="mr-4">{icon}</div>
+//       <p>{description}</p>
+//     </CardContent>
+//   </Card>
+// );
+
+
+// import Link from 'next/link';
+// import { Button } from "@/components/ui/button";
+// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+// import { Calendar, Shield, Clock, Car, ThumbsUp, User, DollarSign, Sparkles } from 'lucide-react';
+
+// export default function Home() {
+//   return (
+//     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+//       {/* Hero Section with Video Background */}
+//       <section className="relative h-screen overflow-hidden">
+//         <video
+//           autoPlay
+//           loop
+//           muted
+//           playsInline
+//           className="absolute top-0 left-0 w-full h-full object-cover"
+//         >
+//           <source src="/videos/limo-background.mp4" type="video/mp4" />
+//           Your browser does not support the video tag.
+//         </video>
+//         <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+//           <div className="text-center max-w-2xl mx-auto px-4">
+//             <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-shadow animate-fade-in-up">
+//               Welcome to LuxeRide Limo Service
+//             </h1>
+//             <p className="text-xl md:text-2xl mb-8 text-shadow animate-fade-in-up animation-delay-300">
+//               Experience luxury transportation at competitive per-mile rates.
+//             </p>
+//             <Button asChild className="bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-8 rounded-full text-xl transition duration-300 animate-fade-in-up animation-delay-600">
+//               <Link href="/booking">Book Your Luxury Ride</Link>
+//             </Button>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Features Section */}
+//       <section className="py-16 bg-gray-800 bg-opacity-90">
+//         <div className="container mx-auto px-4">
+//           <div className="grid md:grid-cols-3 gap-8">
+//             <FeatureCard
+//               icon={<Car className="w-12 h-12 text-amber-500" />}
+//               title="Luxurious Fleet"
+//               description="Choose from our wide range of high-end vehicles for any occasion."
+//             />
+//             <FeatureCard
+//               icon={<User className="w-12 h-12 text-amber-500" />}
+//               title="Professional Drivers"
+//               description="Our experienced chauffeurs ensure a safe and comfortable journey."
+//             />
+//             <FeatureCard
+//               icon={<DollarSign className="w-12 h-12 text-amber-500" />}
+//               title="Transparent Pricing"
+//               description="Pay only for the miles you travel with our competitive rates."
+//             />
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* How It Works Section */}
+//       <section className="py-16 bg-gray-900 bg-opacity-90">
+//         <div className="container mx-auto px-4">
+//           <h2 className="text-3xl font-bold mb-8 text-center">How It Works</h2>
+//           <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-4">
+//             <Step number={1} description="Choose your pickup and drop-off locations" />
+//             <Step number={2} description="Select your preferred vehicle type" />
+//             <Step number={3} description="Get an instant quote based on the distance" />
+//             <Step number={4} description="Confirm and pay securely through our platform" />
+//             <Step number={5} description="Enjoy your luxurious ride!" />
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Why Choose LuxeRide Section */}
+//       <section className="py-16 bg-gray-800 bg-opacity-90">
+//         <div className="container mx-auto px-4">
+//           <h2 className="text-3xl font-bold mb-8 text-center">Why Choose LuxeRide?</h2>
+//           <div className="grid md:grid-cols-3 gap-6">
+//             <Reason icon={<Clock className="w-6 h-6 text-amber-500" />} description="24/7 customer support" />
+//             <Reason icon={<Shield className="w-6 h-6 text-amber-500" />} description="Fully insured and licensed service" />
+//             <Reason icon={<Calendar className="w-6 h-6 text-amber-500" />} description="Flexible booking options" />
+//             <Reason icon={<Sparkles className="w-6 h-6 text-amber-500" />} description="Clean and well-maintained vehicles" />
+//             <Reason icon={<ThumbsUp className="w-6 h-6 text-amber-500" />} description="Satisfaction guaranteed" />
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Footer */}
+//       <footer className="bg-black py-8">
+//         <div className="container mx-auto px-4">
+//           <div className="flex flex-wrap justify-between items-center">
+//             <div className="w-full md:w-auto mb-4 md:mb-0">
+//               <p>&copy; 2024 LuxeRide Limo Service. All rights reserved.</p>
+//             </div>
+//             <div className="w-full md:w-auto space-x-4">
+//               <Link href="/terms" className="hover:text-amber-500 transition duration-300">Terms of Service</Link>
+//               <Link href="/privacy" className="hover:text-amber-500 transition duration-300">Privacy Policy</Link>
+//               <Link href="/contact" className="hover:text-amber-500 transition duration-300">Contact Us</Link>
+//             </div>
+//           </div>
+//         </div>
+//       </footer>
+//     </main>
+//   );
+// }
+
+// // Component for feature cards
+// const FeatureCard = ({ icon, title, description }) => (
+//   <Card className="bg-gray-700 bg-opacity-60 shadow-lg backdrop-blur-sm">
+//     <CardHeader>
+//       <div className="flex justify-center mb-4">{icon}</div>
+//       <CardTitle className="text-2xl font-semibold text-center">{title}</CardTitle>
+//     </CardHeader>
+//     <CardContent>
+//       <p className="text-center">{description}</p>
+//     </CardContent>
+//   </Card>
+// );
+
+// // Component for how it works steps
+// const Step = ({ number, description }) => (
+//   <div className="flex flex-col items-center text-center">
+//     <div className="bg-amber-500 text-black rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-2">
+//       {number}
+//     </div>
+//     <p className="mt-2">{description}</p>
+//   </div>
+// );
+
+// // Component for reasons to choose LuxeRide
+// const Reason = ({ icon, description }) => (
+//   <Card className="bg-gray-700 bg-opacity-60 shadow-lg backdrop-blur-sm">
+//     <CardContent className="flex items-center p-4">
+//       <div className="mr-4">{icon}</div>
+//       <p>{description}</p>
+//     </CardContent>
+//   </Card>
+// );
+
+
+
+// import Link from 'next/link';
+// import { Button } from "@/components/ui/button";
+// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+// import { Calendar, Shield, Clock, Car, ThumbsUp, User, DollarSign, Sparkles } from 'lucide-react';
+
+// export default function Home() {
+//   return (
+//     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+//       {/* Hero Section with Video Background */}
+//       <section className="relative h-screen overflow-hidden">
+//         <video
+//           autoPlay
+//           loop
+//           muted
+//           playsInline
+//           className="absolute top-0 left-0 w-full h-full object-cover"
+//         >
+//           <source src="/videos/limo-background.mp4" type="video/mp4" />
+//           Your browser does not support the video tag.
+//         </video>
+//         <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+//           <div className="text-center max-w-2xl mx-auto px-4">
+//             <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-shadow animate-fade-in-up">
+//               Welcome to LuxeRide Limo Service
+//             </h1>
+//             <p className="text-xl md:text-2xl mb-8 text-shadow animate-fade-in-up animation-delay-300">
+//               Experience luxury transportation at competitive per-mile rates.
+//             </p>
+//             <Button asChild className="bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-8 rounded-full text-xl transition duration-300 animate-fade-in-up animation-delay-600">
+//               <Link href="/booking">Book Your Luxury Ride</Link>
+//             </Button>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Features Section */}
+//       <section className="py-16 bg-gradient-to-b from-gray-800 to-gray-900">
+//         <div className="container mx-auto px-4">
+//           <div className="grid md:grid-cols-3 gap-8">
+//             <FeatureCard
+//               icon={<Car className="w-12 h-12 text-teal-400" />}
+//               title="Luxurious Fleet"
+//               description="Choose from our wide range of high-end vehicles for any occasion."
+//             />
+//             <FeatureCard
+//               icon={<User className="w-12 h-12 text-teal-400" />}
+//               title="Professional Drivers"
+//               description="Our experienced chauffeurs ensure a safe and comfortable journey."
+//             />
+//             <FeatureCard
+//               icon={<DollarSign className="w-12 h-12 text-teal-400" />}
+//               title="Transparent Pricing"
+//               description="Pay only for the miles you travel with our competitive rates."
+//             />
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* How It Works Section */}
+//       <section className="py-16 bg-gray-900 bg-opacity-90">
+//         <div className="container mx-auto px-4">
+//           <h2 className="text-3xl font-bold mb-8 text-center text-teal-400">How It Works</h2>
+//           <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-4">
+//             <Step number={1} description="Choose your pickup and drop-off locations" />
+//             <Step number={2} description="Select your preferred vehicle type" />
+//             <Step number={3} description="Get an instant quote based on the distance" />
+//             <Step number={4} description="Confirm and pay securely through our platform" />
+//             <Step number={5} description="Enjoy your luxurious ride!" />
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Why Choose LuxeRide Section */}
+//       <section className="py-16 bg-gradient-to-b from-gray-800 to-gray-900">
+//         <div className="container mx-auto px-4">
+//           <h2 className="text-3xl font-bold mb-8 text-center text-teal-400">Why Choose LuxeRide?</h2>
+//           <div className="grid md:grid-cols-3 gap-6">
+//             <Reason icon={<Clock className="w-6 h-6 text-teal-400" />} description="24/7 customer support" />
+//             <Reason icon={<Shield className="w-6 h-6 text-teal-400" />} description="Fully insured and licensed service" />
+//             <Reason icon={<Calendar className="w-6 h-6 text-teal-400" />} description="Flexible booking options" />
+//             <Reason icon={<Sparkles className="w-6 h-6 text-teal-400" />} description="Clean and well-maintained vehicles" />
+//             <Reason icon={<ThumbsUp className="w-6 h-6 text-teal-400" />} description="Satisfaction guaranteed" />
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Footer */}
+//       <footer className="bg-black py-8">
+//         <div className="container mx-auto px-4">
+//           <div className="flex flex-wrap justify-between items-center">
+//             <div className="w-full md:w-auto mb-4 md:mb-0">
+//               <p>&copy; 2024 LuxeRide Limo Service. All rights reserved.</p>
+//             </div>
+//             <div className="w-full md:w-auto space-x-4">
+//               <Link href="/terms" className="hover:text-teal-400 transition duration-300">Terms of Service</Link>
+//               <Link href="/privacy" className="hover:text-teal-400 transition duration-300">Privacy Policy</Link>
+//               <Link href="/contact" className="hover:text-teal-400 transition duration-300">Contact Us</Link>
+//             </div>
+//           </div>
+//         </div>
+//       </footer>
+//     </main>
+//   );
+// }
+
+// // Component for feature cards
+// const FeatureCard = ({ icon, title, description }:any) => (
+//   <Card className="bg-teal-900 bg-opacity-90 shadow-xl transform hover:scale-105 transition-transform duration-300">
+//     <CardHeader>
+//       <div className="flex justify-center mb-4">{icon}</div>
+//       <CardTitle className="text-2xl font-semibold text-center text-teal-300">{title}</CardTitle>
+//     </CardHeader>
+//     <CardContent>
+//       <p className="text-center text-teal-100">{description}</p>
+//     </CardContent>
+//   </Card>
+// );
+
+// // Component for how it works steps
+// const Step = ({ number, description }:any) => (
+//   <div className="flex flex-col items-center text-center">
+//     <div className="bg-teal-500 text-black rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-2">
+//       {number}
+//     </div>
+//     <p className="mt-2 text-teal-100">{description}</p>
+//   </div>
+// );
+
+// // Component for reasons to choose LuxeRide
+// const Reason = ({ icon, description }:any) => (
+//   <Card className="bg-teal-900 bg-opacity-90 shadow-xl transform hover:scale-105 transition-transform duration-300">
+//     <CardContent className="flex items-center p-4">
+//       <div className="mr-4">{icon}</div>
+//       <p className="text-teal-100">{description}</p>
+//     </CardContent>
+//   </Card>
+// );
+
+
+// import Link from 'next/link';
+// import { Button } from "@/components/ui/button";
+// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+// import { Calendar, Shield, Clock, Car, ThumbsUp, User, DollarSign, Sparkles } from 'lucide-react';
+
+
+// export default function Home() {
+//   return (
+//     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+//       {/* Hero Section with Video Background */}
+    
+//       <section className="relative h-screen overflow-hidden">
+//         <video
+//           autoPlay
+//           loop
+//           muted
+//           playsInline
+//           className="absolute top-0 left-0 w-full h-full object-cover"
+//         >
+         
+//           <source src="/videos/limo-background.mp4" type="video/mp4" />
+//           Your browser does not support the video tag.
+//         </video>
+//         <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+//           <div className="text-center max-w-2xl mx-auto px-4">
+//             <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-shadow animate-fade-in-up">
+//               Welcome to LuxeRide Limo Service
+//             </h1>
+//             <p className="text-xl md:text-2xl mb-8 text-shadow animate-fade-in-up animation-delay-300">
+//               Experience luxury transportation at competitive per-mile rates.
+//             </p>
+//             <Button asChild className="bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-8 rounded-full text-xl transition duration-300 animate-fade-in-up animation-delay-600">
+//               <Link href="/booking">Book Your Luxury Ride</Link>
+//             </Button>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Features Section */}
+//       <section className="py-16 bg-gradient-to-b from-gray-800 to-gray-900">
+//         <div className="container mx-auto px-4">
+//           <div className="grid md:grid-cols-3 gap-8">
+//             <FeatureCard
+//               icon={<Car className="w-12 h-12 text-amber-400" />}
+//               title="Luxurious Fleet"
+//               description="Choose from our wide range of high-end vehicles for any occasion."
+//             />
+//             <FeatureCard
+//               icon={<User className="w-12 h-12 text-amber-400" />}
+//               title="Professional Drivers"
+//               description="Our experienced chauffeurs ensure a safe and comfortable journey."
+//             />
+//             <FeatureCard
+//               icon={<DollarSign className="w-12 h-12 text-amber-400" />}
+//               title="Transparent Pricing"
+//               description="Pay only for the miles you travel with our competitive rates."
+//             />
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* How It Works and Why Choose LuxeRide Section */}
+//            {/* How It Works and Why Choose LuxeRide Section */}
+//            <section className="py-16 bg-gradient-to-b from-gray-900 via-gray-800 to-black">
+//         <div className="container mx-auto px-4">
+//           {/* How It Works */}
+//           <h2 className="text-3xl font-bold mb-8 text-center text-amber-400 animate-fade-in-up">How It Works</h2>
+//           <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-4 mb-16">
+//             <Step number={1} description="Choose your pickup and drop-off locations" />
+//             <Step number={2} description="Select your preferred vehicle type" />
+//             <Step number={3} description="Get an instant quote based on the distance" />
+//             <Step number={4} description="Confirm and pay securely through our platform" />
+//             <Step number={5} description="Enjoy your luxurious ride!" />
+//           </div>
+
+//           {/* Why Choose LuxeRide */}
+//           <h2 className="text-3xl font-bold mb-8 text-center text-amber-400 animate-fade-in-up">Why Choose LuxeRide?</h2>
+//           <div className="grid md:grid-cols-3 gap-6">
+//             <Reason icon={<Clock className="w-6 h-6 text-amber-400" />} description="24/7 customer support" />
+//             <Reason icon={<Shield className="w-6 h-6 text-amber-400" />} description="Fully insured and licensed service" />
+//             <Reason icon={<Calendar className="w-6 h-6 text-amber-400" />} description="Flexible booking options" />
+//             <Reason icon={<Sparkles className="w-6 h-6 text-amber-400" />} description="Clean and well-maintained vehicles" />
+//             <Reason icon={<ThumbsUp className="w-6 h-6 text-amber-400" />} description="Satisfaction guaranteed" />
+//           </div>
+//         </div>
+//       </section>
+
+
+//       {/* Footer */}
+//       <footer className="bg-black py-8">
+//         <div className="container mx-auto px-4">
+//           <div className="flex flex-wrap justify-between items-center">
+//             <div className="w-full md:w-auto mb-4 md:mb-0">
+//               <p>&copy; 2024 LuxeRide Limo Service. All rights reserved.</p>
+//             </div>
+//             <div className="w-full md:w-auto space-x-4">
+//               <Link href="/terms" className="hover:text-amber-400 transition duration-300">Terms of Service</Link>
+//               <Link href="/privacy" className="hover:text-amber-400 transition duration-300">Privacy Policy</Link>
+//               <Link href="/contact" className="hover:text-amber-400 transition duration-300">Contact Us</Link>
+//             </div>
+//           </div>
+//         </div>
+//       </footer>
+//     </main>
+//   );
+// }
+
+// // Component for feature cards
+// const FeatureCard = ({ icon, title, description }:any) => (
+//   <Card className="bg-amber-900 bg-opacity-90 shadow-xl transform hover:scale-105 transition-transform duration-300">
+//     <CardHeader>
+//       <div className="flex justify-center mb-4">{icon}</div>
+//       <CardTitle className="text-2xl font-semibold text-center text-amber-300">{title}</CardTitle>
+//     </CardHeader>
+//     <CardContent>
+//       <p className="text-center text-amber-100">{description}</p>
+//     </CardContent>
+//   </Card>
+// );
+
+// // Component for how it works steps
+// const Step = ({ number, description }:any) => (
+//   <div className="flex flex-col items-center text-center">
+//     <div className="bg-amber-500 text-black rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-2">
+//       {number}
+//     </div>
+//     <p className="mt-2 text-amber-100">{description}</p>
+//   </div>
+// );
+
+// // Component for reasons to choose LuxeRide
+// const Reason = ({ icon, description }:any) => (
+//   <Card className="bg-amber-900 bg-opacity-90 shadow-xl transform hover:scale-105 transition-transform duration-300">
+//     <CardContent className="flex items-center p-4">
+//       <div className="mr-4">{icon}</div>
+//       <p className="text-amber-100">{description}</p>
+//     </CardContent>
+//   </Card>
+// );
+
+
+
+
+
+
+// 'use client';
+
+// import Link from 'next/link';
+// import { Button } from "@/components/ui/button";
+// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+// import { Calendar, Shield, Clock, Car, ThumbsUp, User, DollarSign, Sparkles } from 'lucide-react';
+// import React, { useEffect, useRef } from 'react';
+// import Navbar from '@/components/Navbar';
+
+// export default function Home() {
+//   const videoRef = useRef<HTMLVideoElement>(null);
+
+//   useEffect(() => {
+//     if (videoRef.current) {
+//       videoRef.current.play().catch(error => {
+//         console.error("Error attempting to play video:", error);
+//       });
+//     }
+//   }, []);
+
+//   return (
+//     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+//       <Navbar />
+//       {/* Hero Section with Video Background */}
+//       <section className="relative h-screen overflow-hidden">
+//         <video
+//           ref={videoRef}
+//           autoPlay
+//           loop
+//           muted
+//           playsInline
+//           className="absolute top-0 left-0 w-full h-full object-cover"
+//         >
+//           <source src="/video/limo-background.mp4" type="video/mp4" />
+//           Your browser does not support the video tag.
+//         </video>
+//         <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center">
+//           <div className="container mx-auto px-4 text-center">
+//             <h1 className="text-5xl md:text-6xl font-bold mb-4 text-shadow animate-fade-in-up">Welcome to LuxeRide Limo Service</h1>
+//             <p className="text-xl md:text-2xl mb-8 text-shadow animate-fade-in-up animation-delay-300">Experience luxury transportation at competitive per-mile rates.</p>
+//             <Button asChild className="bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-8 rounded-full text-xl transition duration-300 animate-fade-in-up animation-delay-600">
+//               <Link href="/booking">Book Your Luxury Ride</Link>
+//             </Button>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Features Section */}
+//       <section className="py-16 bg-black-100 bg-opacity-80">
+//         <div className="container mx-auto px-4">
+//           <div className="grid md:grid-cols-3 gap-8">
+//             <FeatureCard
+//               icon={<Car className="w-12 h-12 text-amber-500" />}
+//               title="Luxurious Fleet"
+//               description="Choose from our wide range of high-end vehicles for any occasion."
+//             />
+//             <FeatureCard
+//               icon={<User className="w-12 h-12 text-amber-500" />}
+//               title="Professional Drivers"
+//               description="Our experienced chauffeurs ensure a safe and comfortable journey."
+//             />
+//             <FeatureCard
+//               icon={<DollarSign className="w-12 h-12 text-amber-500" />}
+//               title="Transparent Pricing"
+//               description="Pay only for the miles you travel with our competitive rates."
+//             />
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* How It Works Section */}
+//       <section className="py-16 bg-black-900 bg-opacity-80">
+//         <div className="container mx-auto px-4">
+//           <h2 className="text-3xl font-bold mb-8 text-center">How It Works</h2>
+//           <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-4">
+//             <Step number={1} description="Choose your pickup and drop-off locations" />
+//             <Step number={2} description="Select your preferred vehicle type" />
+//             <Step number={3} description="Get an instant quote based on the distance" />
+//             <Step number={4} description="Confirm and pay securely through our platform" />
+//             <Step number={5} description="Enjoy your luxurious ride!" />
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Why Choose LuxeRide Section */}
+//       <section className="py-16 bg-black-900 bg-opacity-80">
+//         <div className="container mx-auto px-4">
+//           <h2 className="text-3xl font-bold mb-8 text-center">Why Choose LuxeRide?</h2>
+//           <div className="grid md:grid-cols-3 gap-6">
+//             <Reason icon={<Clock className="w-6 h-6 text-amber-500" />} description="24/7 customer support" />
+//             <Reason icon={<Shield className="w-6 h-6 text-amber-500" />} description="Fully insured and licensed service" />
+//             <Reason icon={<Calendar className="w-6 h-6 text-amber-500" />} description="Flexible booking options" />
+//             <Reason icon={<Sparkles className="w-6 h-6 text-amber-500" />} description="Clean and well-maintained vehicles" />
+//             <Reason icon={<ThumbsUp className="w-6 h-6 text-amber-500" />} description="Satisfaction guaranteed" />
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Footer */}
+//       <footer className="bg-black py-8">
+//         <div className="container mx-auto px-4">
+//           <div className="flex flex-wrap justify-between items-center">
+//             <div className="w-full md:w-auto mb-4 md:mb-0">
+//               <p>&copy; 2024 LuxeRide Limo Service. All rights reserved.</p>
+//             </div>
+//             <div className="w-full md:w-auto space-x-4">
+//               <Link href="/terms" className="hover:text-amber-500 transition duration-300">Terms of Service</Link>
+//               <Link href="/privacy" className="hover:text-amber-500 transition duration-300">Privacy Policy</Link>
+//               <Link href="/contact" className="hover:text-amber-500 transition duration-300">Contact Us</Link>
+//             </div>
+//           </div>
+//         </div>
+//       </footer>
+//     </main>
+//   );
+// }
+
+// // Component for feature cards
+// const FeatureCard: React.FC<{ icon: React.ReactNode; title: string; description: string }> = ({ icon, title, description }) => (
+//   <Card className="bg-gray-700 bg-opacity-50 shadow-lg backdrop-blur-sm">
+//     <CardHeader>
+//       <div className="flex justify-center mb-4">{icon}</div>
+//       <CardTitle className="text-2xl font-semibold text-center">{title}</CardTitle>
+//     </CardHeader>
+//     <CardContent>
+//       <p className="text-center">{description}</p>
+//     </CardContent>
+//   </Card>
+// );
+
+// // Component for how it works steps
+// const Step: React.FC<{ number: number; description: string }> = ({ number, description }) => (
+//   <div className="flex flex-col items-center text-center">
+//     <div className="bg-amber-500 text-black rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-2">
+//       {number}
+//     </div>
+//     <p className="mt-2">{description}</p>
+//   </div>
+// );
+
+// // Component for reasons to choose LuxeRide
+// const Reason: React.FC<{ icon: React.ReactNode; description: string }> = ({ icon, description }) => (
+//   <Card className="bg-gray-700 bg-opacity-50 shadow-lg backdrop-blur-sm">
+//     <CardContent className="flex items-center p-4">
+//       <div className="mr-4">{icon}</div>
+//       <p>{description}</p>
+//     </CardContent>
+//   </Card>
+// );
+
+
+
+import Link from 'next/link';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Calendar, Shield, Clock, Car, ThumbsUp, User, DollarSign, Sparkles } from 'lucide-react';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+      {/* Hero Section with Video Background */}
+      <section className="relative h-screen overflow-hidden animate-fade-in">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          <source src="/videos/limo-background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+          <div className="text-center max-w-2xl mx-auto px-4">
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-shadow animate-fade-in-up">
+              Welcome to LuxeRide Limo Service
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-shadow animate-fade-in-up animation-delay-300">
+              Experience luxury transportation at competitive per-mile rates.
+            </p>
+            <Button asChild className="bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-8 rounded-full text-xl transition duration-300 animate-bounce-up animation-delay-600">
+              <Link href="/booking">Book Your Luxury Ride</Link>
+            </Button>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      {/* Features Section */}
+      <section className="py-32 bg-black-100 animate-fade-in">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8">
+            <FeatureCard
+              icon={<Car className="w-12 h-12 text-amber-400" />}
+              title="Luxurious Fleet"
+              description="Choose from our wide range of high-end vehicles for any occasion."
+            />
+            <FeatureCard
+              icon={<User className="w-12 h-12 text-amber-400" />}
+              title="Professional Drivers"
+              description="Our experienced chauffeurs ensure a safe and comfortable journey."
+            />
+            <FeatureCard
+              icon={<DollarSign className="w-12 h-12 text-amber-400" />}
+              title="Transparent Pricing"
+              description="Pay only for the miles you travel with our competitive rates."
+            />
+          </div>
+        </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* How It Works Section */}
+      <section className="py-32 bg-black-900 bg-opacity-90 animate-fade-in">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center text-amber-400 animate-fade-in-up">How It Works</h2>
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-4">
+            <Step number={1} description="Choose your pickup and drop-off locations" />
+            <Step number={2} description="Select your preferred vehicle type" />
+            <Step number={3} description="Get an instant quote based on the distance" />
+            <Step number={4} description="Confirm and pay securely through our platform" />
+            <Step number={5} description="Enjoy your luxurious ride!" />
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      {/* Why Choose LuxeRide Section */}
+      <section className="py-32 bg-black-100 animate-fade-in">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center text-amber-400 animate-fade-in-up">Why Choose LuxeRide?</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Reason icon={<Clock className="w-6 h-6 text-amber-400" />} description="24/7 customer support" />
+            <Reason icon={<Shield className="w-6 h-6 text-amber-400" />} description="Fully insured and licensed service" />
+            <Reason icon={<Calendar className="w-6 h-6 text-amber-400" />} description="Flexible booking options" />
+            <Reason icon={<Sparkles className="w-6 h-6 text-amber-400" />} description="Clean and well-maintained vehicles" />
+            <Reason icon={<ThumbsUp className="w-6 h-6 text-amber-400" />} description="Satisfaction guaranteed" />
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      {/* Footer */}
+      <footer className="bg-black py-8 animate-fade-in">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-between items-center">
+            <div className="w-full md:w-auto mb-4 md:mb-0">
+              <p>&copy; 2024 LuxeRide Limo Service. All rights reserved.</p>
+            </div>
+            <div className="w-full md:w-auto space-x-4">
+              <Link href="/terms" className="hover:text-amber-400 transition duration-300">Terms of Service</Link>
+              <Link href="/privacy" className="hover:text-amber-400 transition duration-300">Privacy Policy</Link>
+              <Link href="/contact" className="hover:text-amber-400 transition duration-300">Contact Us</Link>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
+
+// Component for feature cards
+const FeatureCard = ({ icon, title, description }:any) => (
+  <Card className="bg-gray-600 bg-opacity-90 shadow-xl transform hover:scale-105 transition-transform duration-300 animate-slide-up">
+    <CardHeader>
+      <div className="flex justify-center mb-4 animate-pulse text-amber-600">{icon}</div>
+      <CardTitle className="text-2xl font-semibold text-center text-amber-500">{title}</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p className="text-center text-white">{description}</p>
+    </CardContent>
+  </Card>
+);
+
+// Component for how it works steps
+const Step = ({ number, description }:any) => (
+  <div className="flex flex-col items-center text-center animate-slide-up">
+    <div className="bg-amber-500 text-black rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-2">
+      {number}
+    </div>
+    <p className="mt-2 text-amber-100">{description}</p>
+  </div>
+);
+
+// Component for reasons to choose LuxeRide
+const Reason = ({ icon, description }:any) => (
+  <Card className="bg-gray-700 bg-opacity-90 shadow-xl transform hover:scale-105 transition-transform duration-300 animate-slide-up">
+    <CardContent className="flex items-center p-4">
+      <div className="mr-4 animate-pulse">{icon}</div>
+      <p className="text-white">{description}</p>
+    </CardContent>
+  </Card>
+);

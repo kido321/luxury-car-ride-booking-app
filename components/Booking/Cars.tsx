@@ -266,15 +266,17 @@
 
 import { DirectionDataContext } from '@/context/DirectionDataContext';
 import { SelectedCarAmountContext } from '@/context/SelectedCarAmount';
+import { SelectedCarContext } from '@/context/SelectedCarContext';
 import CarsList from '@/data/CarsList'
 import Image from 'next/image'
 import React, { useContext, useState, useCallback, useMemo, useEffect } from 'react'
 import { useToast } from "@/components/ui/use-toast"
 
 function Cars() {
-    const [selectedCar, setSelectedCar] = useState<number | null>(null)
+    
     const { directionData } = useContext(DirectionDataContext);
     const {selectedCarAmount,setSelectedCarAmount} = useContext(SelectedCarAmountContext);
+    const {selectedCar,setSelectedCar} = useContext(SelectedCarContext);
 
     const { toast } = useToast()
 
@@ -307,9 +309,10 @@ function Cars() {
                         <div
                             key={index}
                             className={`m-2 p-2 border-[3px] rounded-md hover:border-yellow-400 cursor-pointer bg-white
-                                ${selectedCar === index ? 'border-yellow-400 border-[5px]' : ''}`}
+                                ${selectedCar === item.name ? 'border-yellow-400 border-[5px]' : ''}`}
                             onClick={() => {setSelectedCar(index)
                               setSelectedCarAmount(getCost(item.charges))
+                              setSelectedCar(item.name)
                             }}
                         >
                             <Image

@@ -81,7 +81,7 @@ function AutocompleteAddress() {
   return (
   
 <div className="space-y-4">
-    <div className="relative">
+    {/* <div className="relative">
         <label className=" text-white text-md font-medium ">Where From?</label>
         <input 
             type="text"
@@ -109,8 +109,8 @@ function AutocompleteAddress() {
                     </h2>
                 ))}
             </div>
-        ) : null}
-       {/* <div className="relative">
+        ) : null} */}
+       <div className="relative">
             <label className="text-gray-200 text-md font-medium pb-8">Where To?</label>
             <input
                 type="text"
@@ -138,10 +138,10 @@ function AutocompleteAddress() {
                         </div>
                     ))}
                 </div>
-            ) : null} */}
+            ) : null}
     </div> 
 
-   <div className="relative">
+   {/* <div className="relative">
         <label className="text-gray-200 text-md font-medium pb-8">Where To?</label>
         <input 
             type="text"
@@ -171,7 +171,7 @@ function AutocompleteAddress() {
                 ))}
             </div>
         ) : null} 
-        
+         */}
         
 {/*    <div className="relative">
             <label className="text-gray-200 text-md font-medium pb-8">Where To?</label>
@@ -204,7 +204,7 @@ function AutocompleteAddress() {
             ) : null}     */}
         
         
-{/*         
+        
          <div className="relative">
             <label className="text-gray-200 text-md font-medium pb-8">Where To?</label>
             <input
@@ -233,7 +233,7 @@ function AutocompleteAddress() {
                         </div>
                     ))}
                 </div>
-            ) : null} */}
+            ) : null}
     </div>
 </div>
 

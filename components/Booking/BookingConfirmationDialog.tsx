@@ -45,6 +45,10 @@ export const BookingConfirmationDialog = ({
             <span className="font-medium">Car:</span>
             <span className="col-span-3">{bookingDetails.carType}</span>
           </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <span className="font-medium">Car:</span>
+            <span className="col-span-3">{bookingDetails.price}$</span>
+          </div>
         </div>
         <DialogFooter>
           <Button variant="outline" onClick={onClose}>Cancel</Button>

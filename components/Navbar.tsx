@@ -18,9 +18,6 @@ const Navbar: React.FC = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <NavLink href="/services">Services</NavLink>
-              <NavLink href="/fleet">Our Fleet</NavLink>
-              <NavLink href="/about">About Us</NavLink>
               <NavLink href="/contact">Contact</NavLink>
               <Button asChild variant="outline" className="text-amber-500 border-amber-500 hover:bg-amber-500 hover:text-white">
                 <Link href="/booking">Book Now</Link>
@@ -38,9 +35,6 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <MobileNavLink href="/services">Services</MobileNavLink>
-            <MobileNavLink href="/fleet">Our Fleet</MobileNavLink>
-            <MobileNavLink href="/about">About Us</MobileNavLink>
             <MobileNavLink href="/contact">Contact</MobileNavLink>
             <Button asChild variant="outline" className="w-full text-amber-500 border-amber-500 hover:bg-amber-500 hover:text-white mt-2">
               <Link href="/booking">Book Now</Link>

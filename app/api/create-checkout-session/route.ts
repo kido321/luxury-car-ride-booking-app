@@ -42,15 +42,57 @@
 // }
 
 
+// import { NextRequest, NextResponse } from "next/server";
+// import Stripe from 'stripe';
+
+// const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
+
+// export async function POST(request: NextRequest) {
+//   try {
+//     const body = await request.json();
+//     const { amount, name, date, time, pickupAddress, dropoffAddress, carType } = body;
+
+//     // Create Checkout Sessions from body params.
+//     const session = await stripe.checkout.sessions.create({
+//       payment_method_types: ['card'],
+//       line_items: [
+//         {
+//           price_data: {
+//             currency: 'usd',
+//             product_data: {
+//               name: 'Ride Booking',
+//               description: `${date} ${time} - ${pickupAddress} to ${dropoffAddress} (${carType})`,
+//             },
+//             unit_amount: amount * 100, // amount in cents
+//           },
+//           quantity: 1,
+//         },
+//       ],
+//       mode: 'payment',
+//       success_url: `${request.nextUrl.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+//       cancel_url: `${request.nextUrl.origin}/cancel`,
+//       client_reference_id: name, // You can use this to link the session to your internal user ID
+//     });
+
+//     return NextResponse.json({ id: session.id }, { status: 200 });
+//   } catch (err) {
+//     const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
+//     return NextResponse.json({ message: errorMessage }, { status: 500 });
+//   }
+// }
+
+
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from 'stripe';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
+  apiVersion: '2024-06-20', // Specify the Stripe API version
+});
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { amount, name, date, time, pickupAddress, dropoffAddress, carType } = body;
+    const { amount, name, phoneNumber, date, time, pickupAddress, dropoffAddress, carType } = body;
 
     // Create Checkout Sessions from body params.
     const session = await stripe.checkout.sessions.create({
@@ -63,7 +105,7 @@ export async function POST(request: NextRequest) {
               name: 'Ride Booking',
               description: `${date} ${time} - ${pickupAddress} to ${dropoffAddress} (${carType})`,
             },
-            unit_amount: amount * 100, // amount in cents
+            unit_amount: Math.round(amount * 100), // amount in cents, rounded to avoid floating point issues
           },
           quantity: 1,
         },
@@ -71,12 +113,23 @@ export async function POST(request: NextRequest) {
       mode: 'payment',
       success_url: `${request.nextUrl.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${request.nextUrl.origin}/cancel`,
-      client_reference_id: name, // You can use this to link the session to your internal user ID
+      client_reference_id: name,
+      metadata: {
+        full_name: name,
+        phone_number: phoneNumber,
+        date,
+        time,
+        pickup_address: pickupAddress,
+        dropoff_address: dropoffAddress,
+        car_type: carType,
+        amount: amount.toString(),
+      },
     });
 
     return NextResponse.json({ id: session.id }, { status: 200 });
   } catch (err) {
     const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
+    console.error('Error creating checkout session:', errorMessage);
     return NextResponse.json({ message: errorMessage }, { status: 500 });
   }
 }

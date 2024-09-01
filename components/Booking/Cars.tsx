@@ -286,11 +286,11 @@ function Cars() {
 
     useEffect(() => {
         if (!isValidDirection) {
-            toast({
-                variant: "destructive",
-                title: "Unavailable address",
-                description: "Ride trip location not allowed",
-            });
+            // toast({
+            //     variant: "destructive",
+            //     title: "Unavailable address",
+            //     description: "Ride trip location not allowed",
+            // });
         }
     }, [isValidDirection, toast]);
 

@@ -69,42 +69,12 @@ function MapboxMap() {
     );
 
     const result = await res.json();
-    console.log(result);
-    console.log(result.routes);
+   
     setDirectionData(result);
   };
 
   return (
-    // <div className="p-5">
-    //   <h2 className="text-[20px] font-semibold">Map</h2>
-    //   <div className="rounded-lg overflow-hidden">
-    //     {userLocation ? (
-    //       <Map
-    //         ref={mapRef}
-    //         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
-    //         initialViewState={{
-    //           longitude: userLocation?.lng,
-    //           latitude: userLocation?.lat,
-    //           zoom: 14,
-    //         }}
-    //         style={{ width: "100%", height: 450, borderRadius: 10 }}
-    //         mapStyle="mapbox://styles/mapbox/streets-v9"
-    //       >
-    //         <Markers />
-
-    //         {directionData?.routes ? (
-    //           <MapBoxRoute
-    //             coordinates={directionData?.routes[0]?.geometry?.coordinates}
-    //           />
-    //         ) : null}
-    //       </Map>
-    //     ) : null}
-    //   </div>
-    //   <div className="absolute bottom-[40px]
-    //   z-20 right-[20px]">
-    //  <DistanceTime />
-    //  </div>
-    // </div>
+   
 
     <div className="relative overflow-hidden pt-16 pb-32">
     <div className="p-4 sm:p-6">

@@ -242,6 +242,9 @@ const Booking: React.FC = () => {
         price:selectedCarAmount,
       };
 
+      console.log(selectedCarAmount , 'selectedcaramount');
+      console.log(typeof(selectedCarAmount))
+
       const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
         headers: {

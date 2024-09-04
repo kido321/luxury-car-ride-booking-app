@@ -1,20 +1,8 @@
 export default[
     {
         id:1,
-        name:'Economy',
-        image:'/11.png',
-        charges:1
+        name:'Cadillac',
+        image:'/Cadillac.jpg',
+        charges:3
     },
-    {
-        id:2,
-        name:'Luxury',
-        image:'/44.png',
-        charges:2
-    },
-    {
-        id:3,
-        name:'Electric',
-        image:'/55.png',
-        charges:2.2
-    }
 ]

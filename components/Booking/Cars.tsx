@@ -286,17 +286,29 @@ function Cars() {
 
     useEffect(() => {
         if (!isValidDirection) {
-            // toast({
-            //     variant: "destructive",
-            //     title: "Unavailable address",
-            //     description: "Ride trip location not allowed",
-            // });
+            toast({
+                variant: "destructive",
+                title: "Unavailable address",
+                description: "Ride trip location not allowed",
+            });
         }
     }, [isValidDirection, toast]);
 
     const getCost = useCallback((charges: number) => {
         if (!isValidDirection) return null;
-        return (charges * directionData.routes[0].distance * 0.000621371192).toFixed(2);
+       
+       
+        {
+            if ( ((charges * directionData.routes[0].distance * 0.000621371192)) < 50 ){
+return '50';
+            }
+            else{
+                return (charges * directionData.routes[0].distance * 0.000621371192).toFixed(2);
+            }
+            
+           
+        }
+
     }, [isValidDirection, directionData]);
 
     return (

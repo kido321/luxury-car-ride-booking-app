@@ -112,7 +112,7 @@ export async function POST(request: NextRequest) {
       ],
       mode: 'payment',
       success_url: `${request.nextUrl.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${request.nextUrl.origin}/cancel`,
+      cancel_url: `${request.nextUrl.origin}/`,
       client_reference_id: name,
       metadata: {
         full_name: name,

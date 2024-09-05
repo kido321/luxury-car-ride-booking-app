@@ -296,14 +296,31 @@ function Cars() {
 
     const getCost = useCallback((charges: number) => {
         if (!isValidDirection) return null;
-       
-       
+       var mile =  directionData.routes[0].distance * 0.000621371192
+       var price  = (charges * mile) ;
+       let charge;
+  switch (true) {
+    case mile <= 10:
+      charge = 5;
+      break;
+    case mile <= 20:
+      charge = 4.5;
+      break;
+    case mile <= 50:
+      charge = 4;
+      break;
+    case mile <= 100:
+      charge = 3.5;
+      break;
+    default:
+      charge = 3;
+  }
         {
-            if ( ((charges * directionData.routes[0].distance * 0.000621371192)) < 50 ){
-return '50';
+            if ( price < 60 ){
+return '65';
             }
             else{
-                return (charges * directionData.routes[0].distance * 0.000621371192).toFixed(2);
+                return (charge * mile).toFixed(2);
             }
             
            

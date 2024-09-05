@@ -19,15 +19,15 @@ export default function ContactPage() {
             <CardContent className="space-y-8">
               <div className="flex items-center">
                 <Phone className="w-8 h-8 text-[#ffc107] mr-6 flex-shrink-0" />
-                <span className="text-xl  text-gray-100">+1 (555) 123-4567</span>
+                <span className="text-xl  text-gray-100">+1 (952) 657-4313</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-8 h-8 text-[#ffc107] mr-6 flex-shrink-0" />
-                <span className="text-xl  text-gray-100">contact@luxeride.com</span>
+                <span className="text-xl  text-gray-100">mihertabadamu1@gmail.com</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="w-8 h-8 text-[#ffc107] mr-6 flex-shrink-0 mt-1" />
-                <span className="text-xl  text-gray-100">123 Luxury Lane,<br />Prestige City, PC 12345</span>
+                <span className="text-xl  text-gray-100">Las Vegas</span>
               </div>
               <div className="flex items-center">
                 <Clock className="w-8 h-8 text-[#ffc107] mr-6 flex-shrink-0" />
@@ -45,22 +45,22 @@ export default function ContactPage() {
               <table className="w-full text-xl">
                 <tbody>
                   <tr>
-                    <td className="py-3 pr-6 font-medium text-[#ffc107]">Monday - Friday:</td>
-                    <td className="py-3  text-gray-100">9:00 AM - 8:00 PM</td>
+                    <td className="py-3 pr-6 font-medium text-[#ffc107]">Monday - Sunday:</td>
+                    <td className="py-3  text-gray-100">24/7</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <td className="py-3 pr-6 font-medium text-[#ffc107]">Saturday:</td>
                     <td className="py-3  text-gray-100">10:00 AM - 6:00 PM</td>
                   </tr>
                   <tr>
                     <td className="py-3 pr-6 font-medium text-[#ffc107]">Sunday:</td>
                     <td className="py-3  text-gray-100">Closed</td>
-                  </tr>
+                  </tr> */}
                 </tbody>
               </table>
-              <p className="mt-8 text-lg text-gray-100">
+              {/* <p className="mt-8 text-lg text-gray-100">
                 Note: Our vehicle service is available 24/7. Office hours are for in-person inquiries and support.
-              </p>
+              </p> */}
             </CardContent>
           </Card>
         </div>
@@ -73,7 +73,7 @@ export default function ContactPage() {
           <CardContent>
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-73.9876543!3d40.7654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM40zNDUnMzAuNiJOIDczwrA1OSczNS42Ilc!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25682.51489385569!2d-115.17741651290859!3d36.11497253863503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c4383428d4eb%3A0x43e2195d0c26834c!2sLas%20Vegas%20Strip%2C%20NV%2C%20USA!5e0!3m2!1sen!2sus!4v1636338872183!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -87,4 +87,6 @@ export default function ContactPage() {
       </div>
     </main>
   );
+
+
 }

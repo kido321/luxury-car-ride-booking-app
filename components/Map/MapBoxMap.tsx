@@ -90,6 +90,7 @@ function MapboxMap() {
             }}
             style={{ width: "100%", height: "calc(100vh - 250px)", minHeight: "400px" }}
             mapStyle="mapbox://styles/mapbox/streets-v9"
+            interactive={false}
           >
             <Markers />
             {directionData?.routes ? (

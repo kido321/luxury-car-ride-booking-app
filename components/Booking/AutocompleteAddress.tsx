@@ -81,35 +81,6 @@ function AutocompleteAddress() {
   return (
   
 <div className="space-y-4">
-    {/* <div className="relative">
-        <label className=" text-white text-md font-medium ">Where From?</label>
-        <input 
-            type="text"
-            className="bg-white p-2 border-2 w-full rounded-lg outline-none focus:border-yellow-400 text-sm transition ease-in-out duration-150 shadow-[0_0_10px_rgba(255,255,255,0.5)]"
-            value={source}
-            placeholder="Pick off"
-            onChange={(e) => {
-                setSource(e.target.value);
-                setSourceChange(true);
-                setPickupAddress(e.target.value);
-                
-            }}
-        />
-        {addressList?.suggestions && sourceChange ? (
-            <div className="shadow-lg p-2 rounded-lg absolute w-full bg-white z-20 mt-1">
-                {addressList.suggestions.map((item: any, index: number) => (
-                    <h2
-                        key={index}
-                        className="p-2 hover:bg-gray-200 cursor-pointer rounded-md transition ease-in-out duration-150"
-                        onClick={() =>{onSourceAddressClick(item)
-                            setPickupAddress(item.full_address);
-                        }}
-                    >
-                        {item.full_address}
-                    </h2>
-                ))}
-            </div>
-        ) : null} */}
        <div className="relative">
             <label className="text-gray-200 text-md font-medium pb-8">Where To?</label>
             <input
@@ -140,71 +111,6 @@ function AutocompleteAddress() {
                 </div>
             ) : null}
     </div> 
-
-   {/* <div className="relative">
-        <label className="text-gray-200 text-md font-medium pb-8">Where To?</label>
-        <input 
-            type="text"
-            className="bg-white p-2 border-2 w-full rounded-lg outline-none focus:border-yellow-400 text-sm transition ease-in-out duration-150 shadow-[0_0_10px_rgba(255,255,255,0.5)]"
-            value={destination}
-            placeholder="Drop off"
-            onChange={(e) => {
-                setDistination(e.target.value);
-                setDestinationChange(true);
-                setDropoffAddress(e.target.value);
-            }}
-        />
-        {addressList?.suggestions && destinationChange ? (
-            <div className="shadow-lg p-2 rounded-lg absolute w-full bg-white z-20 mt-1">
-                {addressList.suggestions.map((item: any, index: number) => (
-                    <h2
-                        key={index}
-                        className="p-2 hover:bg-gray-200 cursor-pointer rounded-md transition ease-in-out duration-150"
-                        onClick={() => {
-                            onDestinationAddressClick(item)
-                            setDropoffAddress(item.full_address);
-                            console.log(dropoffAddress)
-                        }}
-                    >
-                        {item.full_address}
-                    </h2>
-                ))}
-            </div>
-        ) : null} 
-         */}
-        
-{/*    <div className="relative">
-            <label className="text-gray-200 text-md font-medium pb-8">Where To?</label>
-            <input
-                type="text"
-                className="bg-white p-2 border-2 w-full rounded-lg outline-none focus:border-yellow-400 text-sm transition ease-in-out duration-150 shadow-[0_0_10px_rgba(255,255,255,0.5)]"
-                value={destination}
-                placeholder="Pick up"
-                onChange={(e) => {
-                    setSource(e.target.value);
-                setSourceChange(true);
-                setPickupAddress(e.target.value);
-                }}
-            />
-            {addressList?.suggestions &&  sourceChange ? (
-                <div className="shadow-lg rounded-lg absolute w-full bg-white z-20 mt-1 max-h-80 overflow-y-auto">
-                    {addressList.suggestions.map((item:any, index:number) => (
-                        <div
-                            key={index}
-                            className="p-2 hover:bg-gray-200 cursor-pointer rounded-md transition ease-in-out duration-150"
-                            onClick={() =>{ onDestinationAddressClick(item)
-                                setDropoffAddress(item.full_address);
-                            }}
-                        >
-                            <h2 className="font-semibold">{item.name}</h2>
-                            <p className="text-sm text-gray-600">{item.full_address}</p>
-                        </div>
-                    ))}
-                </div>
-            ) : null}     */}
-        
-        
-        
          <div className="relative">
             <label className="text-gray-200 text-md font-medium pb-8">Where To?</label>
             <input

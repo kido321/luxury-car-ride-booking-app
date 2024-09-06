@@ -5,10 +5,6 @@ import Navbar from '@/components/Navbar';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 const inter = Inter({ subsets: ['latin'] })
-import { DestinationCordiContext } from '@/context/DestinationCordiContext';
-import { DirectionDataContext } from '@/context/DirectionDataContext';
-import { SourceCordiContext } from '@/context/SourceCordiContext';
-import { UserLocationContext } from '@/context/UserLocationContext';
 import { Toaster } from "@/components/ui/toaster"
 
 

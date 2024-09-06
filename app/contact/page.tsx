@@ -17,9 +17,11 @@ export default function ContactPage() {
               <CardTitle className="text-3xl font-semibold text-[#ffc107] mb-6">Get in Touch</CardTitle>
             </CardHeader>
             <CardContent className="space-y-8">
-              <div className="flex items-center">
+            <div className="flex items-center">
                 <Phone className="w-8 h-8 text-[#ffc107] mr-6 flex-shrink-0" />
-                <span className="text-xl  text-gray-100">+1 (952) 657-4313</span>
+                <a href="tel:+19526574313" className="text-xl text-gray-100 hover:underline">
+                  +1 (952) 657-4313
+                </a>
               </div>
               <div className="flex items-center">
                 <Mail className="w-8 h-8 text-[#ffc107] mr-6 flex-shrink-0" />
